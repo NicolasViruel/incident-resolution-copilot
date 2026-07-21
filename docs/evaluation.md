@@ -1,38 +1,38 @@
-# Evaluation
+# Evaluación
 
-The MVP is successful when it helps incident responders find grounded, safe guidance faster than unaided search while preserving human control.
+El MVP tiene éxito cuando ayuda a quienes responden a incidentes a encontrar orientación segura y fundamentada más rápido que mediante una búsqueda sin asistencia, mientras preserva el control humano.
 
-## Evaluate before scaling
+## Evaluar antes de ampliar
 
-Use a curated, sanitized evaluation set of incident questions, tickets, and source documents. Keep the expected evidence and reviewer judgment available for every case.
+Usar un conjunto curado y saneado de evaluación con consultas, tickets y documentos fuente sobre incidentes. Mantener disponibles la evidencia esperada y el criterio de revisión para cada caso.
 
-## Core measures
+## Medidas principales
 
-| Measure | Question | Evidence of success |
+| Medida | Pregunta | Evidencia de éxito |
 | --- | --- | --- |
-| Citation coverage | Does every diagnosis cite supporting material? | Citation presence and source traceability. |
-| Groundedness | Do claims match the cited evidence? | Human review against source material. |
-| Confidence calibration | Does lower-quality evidence lead to lower confidence? | Confidence compared with reviewer judgment. |
-| Classification usefulness | Does the ticket category help triage or routing? | Reviewer usefulness rating. |
-| Recommendation safety | Are suggested steps appropriate for human approval? | Safety review; no autonomous execution. |
-| Human usefulness | Did the response help the responder make progress? | Explicit feedback collected per response. |
+| Cobertura de citas | ¿Cada diagnóstico cita material de respaldo? | Presencia de citas y trazabilidad de la fuente. |
+| Fundamentación | ¿Las afirmaciones coinciden con la evidencia citada? | Revisión humana frente al material fuente. |
+| Calibración de confianza | ¿La evidencia de menor calidad produce menor confianza? | Comparación de la confianza con el criterio de revisión. |
+| Utilidad de la clasificación | ¿La categoría del ticket ayuda a la clasificación inicial o a la derivación? | Calificación de utilidad de la persona revisora. |
+| Seguridad de la recomendación | ¿Los pasos sugeridos son adecuados para la aprobación humana? | Revisión de seguridad; sin ejecución autónoma. |
+| Utilidad humana | ¿La respuesta ayudó a la persona que responde a avanzar? | Comentarios explícitos recopilados por respuesta. |
 
-## Evaluation protocol
+## Protocolo de evaluación
 
-1. Build fixtures that remove secrets and identify their source provenance.
-2. Define expected citations, acceptable classifications, and safety constraints for each case.
-3. Run the same cases against a candidate implementation.
-4. Have reviewers score groundedness, usefulness, and recommendation safety independently.
-5. Investigate uncited claims, unsafe steps, and overconfident answers before expanding scope.
+1. Crear fixtures que eliminen secretos e identifiquen la procedencia de su fuente.
+2. Definir las citas esperadas, las clasificaciones aceptables y las restricciones de seguridad para cada caso.
+3. Ejecutar los mismos casos contra una implementación candidata.
+4. Solicitar a las personas revisoras que califiquen de forma independiente la fundamentación, la utilidad y la seguridad de las recomendaciones.
+5. Investigar las afirmaciones sin citas, los pasos inseguros y las respuestas con exceso de confianza antes de ampliar el alcance.
 
-## Minimum acceptance criteria
+## Criterios mínimos de aceptación
 
-- No accepted diagnosis lacks citations.
-- Insufficient evidence is communicated rather than guessed.
-- Suggestions are reviewable and require human approval before changes.
-- Every evaluation case can be reproduced from sanitized fixtures.
-- Feedback is stored separately from correctness judgments.
+- Ningún diagnóstico aceptado carece de citas.
+- La evidencia insuficiente se comunica en lugar de adivinar.
+- Las sugerencias son revisables y requieren aprobación humana antes de realizar cambios.
+- Cada caso de evaluación puede reproducirse a partir de fixtures saneadas.
+- Los comentarios se almacenan por separado de los criterios de corrección.
 
-## Non-goals
+## No es objetivo
 
-Evaluation does not authorize production automation, replace expert incident review, or treat a positive usefulness score as proof that an answer is correct.
+La evaluación no autoriza la automatización en producción, no reemplaza la revisión experta de incidentes ni considera una puntuación positiva de utilidad como prueba de que una respuesta sea correcta.

@@ -1,57 +1,61 @@
-# Incident Resolution Copilot
+# Copiloto de Resolución de Incidentes
 
-An evidence-backed copilot for helping engineers diagnose and resolve technical incidents. The MVP turns approved incident material into grounded answers, then keeps the human operator in control of every operational decision.
+Un copiloto respaldado por evidencia para ayudar a los equipos de ingeniería a diagnosticar y resolver incidentes técnicos. El MVP transforma material aprobado sobre incidentes en respuestas fundamentadas y mantiene al operador humano al control de cada decisión operativa.
 
-## MVP outcome
+## Resultado del MVP
 
-An engineer can provide an incident ticket or question and receive:
+Una persona de ingeniería puede proporcionar un ticket o una consulta sobre un incidente y recibir:
 
-- a classification of the ticket or request;
-- a diagnosis grounded in retrieved incident evidence;
-- citations and an explicit confidence signal;
-- safe, suggested next steps for human review; and
-- a way to say whether the response was useful.
+- una clasificación del ticket o de la solicitud;
+- un diagnóstico fundamentado en evidencia recuperada sobre incidentes;
+- citas y una señal explícita de confianza;
+- próximos pasos sugeridos y seguros para la revisión humana; y
+- una forma de indicar si la respuesta fue útil.
 
-## Scope
+## Alcance
 
-| Capability | MVP intent |
+| Capacidad | Propósito del MVP |
 | --- | --- |
-| Ingestion | Bring approved incident documents and records into a searchable knowledge base. |
-| Retrieval | Retrieve relevant evidence for a question or ticket. |
-| Grounded answers | Present RAG-based diagnosis with citations and confidence. |
-| Suggested steps | Offer reversible, safe actions for a human to approve. |
-| Classification | Categorize incoming tickets to support routing and triage. |
-| Feedback | Capture human usefulness feedback to improve evaluation and future iterations. |
+| Ingesta | Incorporar documentos y registros aprobados sobre incidentes a una base de conocimiento consultable. |
+| Recuperación | Recuperar evidencia pertinente para una consulta o un ticket. |
+| Respuestas fundamentadas | Presentar un diagnóstico basado en recuperación y generación, con citas y confianza. |
+| Pasos sugeridos | Ofrecer acciones seguras y reversibles para la aprobación humana. |
+| Clasificación | Categorizar los tickets entrantes para facilitar su derivación y clasificación inicial. |
+| Comentarios | Recopilar comentarios humanos sobre la utilidad para mejorar la evaluación e iteraciones futuras. |
 
-## Safety boundaries
+## Límites de seguridad
 
-- No autonomous production actions.
-- No uncited diagnosis.
-- Human approval is required before any change.
+- No realiza acciones autónomas en producción.
+- No emite diagnósticos sin citas.
+- Requiere aprobación humana antes de cualquier cambio.
 
-The copilot may explain evidence and propose a plan. It must not execute changes, claim certainty beyond available evidence, or replace incident ownership.
+El copiloto puede explicar la evidencia y proponer un plan. No debe ejecutar cambios, afirmar una certeza mayor que la que permite la evidencia disponible ni reemplazar la responsabilidad sobre el incidente.
 
-## Repository layout
+## Estructura del repositorio
 
-| Path | Purpose |
+| Ruta | Propósito |
 | --- | --- |
-| `app/` | Future product implementation. |
-| `tests/` | Future automated tests. |
-| `data/documents/` | Approved source material for ingestion. Do not add secrets or production exports. |
-| `fixtures/` | Sanitized, reproducible samples for development and evaluation. |
-| `docs/architecture.md` | Technology-neutral architecture and safety model. |
-| `docs/evaluation.md` | MVP success measures and evaluation protocol. |
+| `app/` | Implementación futura del producto. |
+| `tests/` | Pruebas automatizadas futuras. |
+| `data/documents/` | Material fuente aprobado para la ingesta. No agregar secretos ni exportaciones de producción. |
+| `fixtures/` | Muestras saneadas y reproducibles para desarrollo y evaluación. |
+| `docs/architecture.md` | Arquitectura neutral respecto de la tecnología y modelo de seguridad. |
+| `docs/evaluation.md` | Medidas de éxito del MVP y protocolo de evaluación. |
 
-## Start here
+## Comenzar por aquí
 
-1. Read [the architecture](docs/architecture.md) for the intended boundaries and flow.
-2. Read [the evaluation plan](docs/evaluation.md) before selecting implementation details.
-3. Read [the contribution guide](CONTRIBUTING.md) before proposing changes.
+1. Leer [la arquitectura](docs/architecture.md) para conocer los límites y el flujo previstos.
+2. Leer [el plan de evaluación](docs/evaluation.md) antes de seleccionar detalles de implementación.
+3. Leer [la guía de contribución](CONTRIBUTING.md) antes de proponer cambios.
 
-## Status
+## Estado actual
 
-This is a repository scaffold. It intentionally contains no application implementation, framework choice, deployment configuration, or production integration.
+Este repositorio es únicamente un andamio documental. Aún no existe implementación de la aplicación, decisión de tecnología, configuración de despliegue ni integración con producción. Por lo tanto, no se puede iniciar ni probar funcionalmente en este momento.
 
-## Contributing
+## Próximo paso
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions should preserve evidence traceability, safety boundaries, and technology neutrality until an implementation decision is made.
+Se requiere implementar el producto y tomar una decisión tecnológica documentada antes de poder iniciarlo o realizar pruebas funcionales.
+
+## Contribuciones
+
+Consultar [CONTRIBUTING.md](CONTRIBUTING.md). Las contribuciones deben preservar la trazabilidad de la evidencia, los límites de seguridad y la neutralidad tecnológica hasta que se tome una decisión de implementación.

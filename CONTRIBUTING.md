@@ -1,43 +1,43 @@
-# Contributing
+# Contribuir
 
-Help build a copilot that is useful during incidents without taking control away from incident responders.
+Ayude a construir un copiloto que sea útil durante los incidentes sin quitar el control a quienes responden ante ellos.
 
-## Before contributing
+## Antes de contribuir
 
-1. Read `README.md`, `docs/architecture.md`, and `docs/evaluation.md`.
-2. Keep proposals focused on a single, reviewable outcome.
-3. Explain how the change preserves evidence, citations, confidence, and human approval.
+1. Leer `README.md`, `docs/architecture.md` y `docs/evaluation.md`.
+2. Mantener las propuestas enfocadas en un único resultado que pueda revisarse.
+3. Explicar cómo el cambio preserva la evidencia, las citas, la confianza y la aprobación humana.
 
-## Contribution principles
+## Principios de contribución
 
-- Treat source material as evidence: preserve provenance and avoid unsupported conclusions.
-- Keep production actions human-approved and explicit.
-- Use sanitized fixtures; never commit secrets, credentials, customer data, or raw production incident exports.
-- Prefer small, reversible changes with focused tests when implementation begins.
-- Keep documentation English-first, concise, and aligned with the MVP scope.
+- Tratar el material fuente como evidencia: preservar su procedencia y evitar conclusiones sin respaldo.
+- Mantener las acciones de producción explícitas y sujetas a aprobación humana.
+- Usar muestras de prueba saneadas; nunca incluir secretos, credenciales, datos de clientes ni exportaciones sin procesar de incidentes de producción.
+- Preferir cambios pequeños y reversibles con pruebas focalizadas cuando comience la implementación.
+- Mantener la documentación concisa y alineada con el alcance del MVP.
 
-## Changes to review
+## Cambios que se deben revisar
 
-Every implementation change should identify:
+Cada cambio de implementación debe identificar:
 
-- the input evidence and expected citations;
-- confidence behavior, including what happens when evidence is insufficient;
-- the proposed steps and their safety constraints;
-- tests or evaluation cases; and
-- the rollback boundary.
+- la evidencia de entrada y las citas esperadas;
+- el comportamiento de la confianza, incluido qué sucede cuando la evidencia es insuficiente;
+- los pasos propuestos y sus restricciones de seguridad;
+- las pruebas o los casos de evaluación; y
+- el límite de reversión.
 
-## Commit guidance
+## Guía para confirmaciones
 
-Use Conventional Commit messages. Keep code, tests, and the documentation that explains one behavior in the same work unit.
+Usar mensajes de confirmación convencionales. Mantener el código, las pruebas y la documentación que explica un comportamiento dentro de la misma unidad de trabajo.
 
-Examples:
+Ejemplos:
 
 ```text
-feat(ingestion): preserve document provenance
-fix(retrieval): reject answers without citations
-docs(evaluation): define groundedness rubric
+feat(ingesta): preservar la procedencia del documento
+fix(recuperación): rechazar respuestas sin citas
+docs(evaluación): definir la rúbrica de fundamentación
 ```
 
-## Reporting concerns
+## Comunicar inquietudes
 
-Do not place sensitive incident details in public issues, commits, or fixtures. If a contribution could weaken the safety boundaries, pause the change and raise the concern with the repository maintainers.
+No incluir detalles sensibles de incidentes en incidencias públicas, confirmaciones ni fixtures. Si una contribución pudiera debilitar los límites de seguridad, pausar el cambio y comunicar la inquietud a las personas mantenedoras del repositorio.
